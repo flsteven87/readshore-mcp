@@ -1,0 +1,21 @@
+{
+  "name": "readshore",
+  "version": "1.2.0",
+  "description": "ReadShore is a read-later app. Connect your ReadShore library to find the articles, videos and posts you saved, read their saved text alongside ReadShore's summary and analysis, see what has waited longest unread, and save new links to read later.",
+  "author": {
+    "name": "AIthentic LLC",
+    "email": "steven@aithentic.tw",
+    "url": "https://aithentic.tw/"
+  },
+  "homepage": "https://readshore.app/connect-ai-assistants/",
+  "repository": "https://github.com/flsteven87/readshore-mcp",
+  "license": "MIT",
+  "keywords": [
+    "read-later",
+    "reading",
+    "library",
+    "summaries"
+  ],
+  "mcpServers": "./.mcp.json",
+  "privacyPolicyUrl": "https://readshore.app/privacy/"
+}

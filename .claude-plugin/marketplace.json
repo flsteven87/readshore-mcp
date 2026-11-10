@@ -1,0 +1,19 @@
+{
+  "name": "readshore",
+  "owner": {
+    "name": "AIthentic LLC",
+    "email": "steven@aithentic.tw",
+    "url": "https://aithentic.tw/"
+  },
+  "metadata": {
+    "description": "ReadShore's connector for the reader's own library."
+  },
+  "plugins": [
+    {
+      "name": "readshore",
+      "source": "./plugins/readshore",
+      "description": "ReadShore is a read-later app. Connect your ReadShore library to find the articles, videos and posts you saved, read their saved text alongside ReadShore's summary and analysis, see what has waited longest unread, and save new links to read later.",
+      "version": "1.2.0"
+    }
+  ]
+}

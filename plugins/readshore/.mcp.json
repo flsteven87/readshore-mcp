@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "readshore": {
+      "type": "http",
+      "url": "https://readshore.app/mcp"
+    }
+  }
+}
