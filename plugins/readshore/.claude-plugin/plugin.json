@@ -1,5 +1,6 @@
 {
   "name": "readshore",
+  "displayName": "ReadShore",
   "version": "1.2.1",
   "description": "ReadShore is a read-later app. Connect your ReadShore library to find the articles, videos and posts you saved, read their saved text alongside ReadShore's summary and analysis, see what has waited longest unread, and save new links to read later.",
   "author": {
@@ -17,5 +18,8 @@
     "summaries"
   ],
   "mcpServers": "./.mcp.json",
-  "privacyPolicyUrl": "https://readshore.app/privacy/"
+  "privacyPolicyUrl": "https://readshore.app/privacy/",
+  "termsOfServiceUrl": "https://readshore.app/terms/",
+  "supportUrl": "https://readshore.app/support/",
+  "documentationUrl": "https://readshore.app/connect-ai-assistants/"
 }
