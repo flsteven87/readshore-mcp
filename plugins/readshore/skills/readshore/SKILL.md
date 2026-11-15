@@ -5,7 +5,7 @@ description: "Find, read and save to the reader's own ReadShore library through 
 
 # Work with a ReadShore library
 
-ReadShore is a read-later app for iPhone. Readers save articles, videos and public posts, and
+ReadShore is a read-later app with a web library and an iPhone app. Readers save articles, videos and public posts, and
 ReadShore keeps the saved text with a Glance, Summary and Analysis whose statements cite numbered
 passages of that text. This skill covers using a reader's library through ReadShore's remote MCP
 server.
@@ -20,9 +20,10 @@ add the server URL in the client's MCP settings with OAuth authentication; the g
 client-specific steps.
 
 The first connection opens readshore.app/connect, or the ReadShore app on iPhone and iPad. The
-reader signs in with the Apple Account they use in ReadShore and chooses Allow. This step belongs
-to the reader; never ask for passwords or codes. Only a reader who has already signed in to the
-ReadShore iPhone app once can connect.
+reader uses the sign-in method of the Account holding their library (Apple or Google) and chooses
+Allow. An Account can
+be created in the web app at https://readshore.app/app/. This step belongs to the reader; never
+ask for passwords or codes.
 
 ## 2. Find saves
 
@@ -30,11 +31,12 @@ ReadShore iPhone app once can connect.
 ReadShore's Glance, Summary and Analysis; a save matches when every word appears in it. A
 blank query lists saves newest or oldest first; `state` filters unread or read. Unread saves
 oldest first are the ones that have waited longest. Results are cards with `saved_item_id` and
-`next_cursor` for the next page.
+`next_cursor` for the next page with the same order.
 
 ## 3. Read one save
 
-`readshore_read_saved_item` with `part: "overview"` returns the source facts, ReadShore's Glance,
+`readshore_read_saved_item` takes the `saved_item_id` returned by search or save as `id`.
+With `part: "overview"` it returns the source facts, ReadShore's Glance,
 Summary and Analysis when they exist, and a `text_cursor`. With `part: "original_text"` and that
 cursor, it returns the saved text in pages; each passage starts with its number in brackets.
 Summary and Analysis statements list the passage numbers they rest on. When answering from a
@@ -92,7 +94,8 @@ library.
 
 ## 5. Save a link
 
-`readshore_save_link` saves one http or https address, as sharing it to ReadShore would. A link
+`readshore_save_link` takes `url` from the reader's supplied link or the source they asked
+to save: one full http or https address, at most 4096 characters, as sharing it to ReadShore would. A link
 already saved returns that item, and one in Recently Deleted is restored. With the reader's
 Summary & Analysis on, ReadShore reads and summarizes the page right away; it appears in the app,
 unread, when the app syncs.
