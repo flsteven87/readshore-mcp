@@ -3,7 +3,7 @@
   "name": "app.readshore/readshore",
   "title": "ReadShore",
   "description": "Structured, cited reading data from the reader's own ReadShore library.",
-  "version": "1.3.3",
+  "version": "1.3.4",
   "websiteUrl": "https://readshore.app/connect-ai-assistants/",
   "icons": [
     {

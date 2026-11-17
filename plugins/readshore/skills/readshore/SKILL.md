@@ -27,6 +27,10 @@ ask for passwords or codes.
 
 ## 2. Find saves
 
+A `https://readshore.app/library` link means the reader's library: use a blank query.
+A `https://readshore.app/search?q=…` link means their search: use its `q` words with
+`readshore_search_saved_items`. Answer the reader's words as written.
+
 `readshore_search_saved_items` matches title, author, publication, address, saved text and
 ReadShore's Glance, Summary and Analysis; a save matches when every word appears in it. A
 blank query lists saves newest or oldest first; `state` filters unread or read. Unread saves
@@ -35,7 +39,10 @@ oldest first are the ones that have waited longest. Results are cards with `save
 
 ## 3. Read one save
 
-`readshore_read_saved_item` takes the `saved_item_id` returned by search or save as `id`.
+`readshore_read_saved_item` takes the `saved_item_id` returned by search or save, or the reader's
+`https://readshore.app/s/<uuid>` Save link, as `id` (a trailing slash, query or fragment is allowed).
+A Save link names one of the reader's saves; read it before answering the reader's words as written.
+It grants no access to another reader's library.
 With `part: "overview"` it returns the source facts, ReadShore's Glance,
 Summary and Analysis when they exist, and a `text_cursor`. With `part: "original_text"` and that
 cursor, it returns the saved text in pages; each passage starts with its number in brackets.
@@ -99,6 +106,10 @@ to save: one full http or https address, at most 4096 characters, as sharing it 
 already saved returns that item, and one in Recently Deleted is restored. With the reader's
 Summary & Analysis on, ReadShore reads and summarizes the page right away; it appears in the app,
 unread, when the app syncs.
+
+ReadShore's own `/s/`, `/library` and `/search` addresses are not source articles to save.
+Use `readshore_read_saved_item` for a Save link or `readshore_search_saved_items` for library
+and search links; `readshore_save_link` refuses those addresses and names the appropriate tool.
 
 ## Limits
 
