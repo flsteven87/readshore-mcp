@@ -1,0 +1,20 @@
+{
+  "name": "readshore",
+  "displayName": "ReadShore",
+  "description": "Find, read and save to your ReadShore library, with summaries, analysis and passages to cite",
+  "shortDescription": "Your read-later library",
+  "setup": {
+    "notice": "A ReadShore account is required. Create one with Apple or Google sign-in in the ReadShore web app or iPhone app."
+  },
+  "homepage": "https://readshore.app/",
+  "repository": "https://github.com/flsteven87/readshore-mcp",
+  "logo": "assets/icon.png",
+  "keywords": [
+    "Productivity"
+  ],
+  "mcpServers": {
+    "readshore": {
+      "url": "https://readshore.app/mcp"
+    }
+  }
+}
