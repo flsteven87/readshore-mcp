@@ -1,7 +1,7 @@
 {
   "name": "readshore",
   "displayName": "ReadShore",
-  "description": "Find, read and save to your ReadShore library, with summaries, analysis and passages to cite",
+  "description": "Save articles, find them by topic or tag, and get an overview of your ReadShore library",
   "shortDescription": "Your read-later library",
   "setup": {
     "notice": "A ReadShore account is required. Create one with Apple or Google sign-in in the ReadShore web app or iPhone app."

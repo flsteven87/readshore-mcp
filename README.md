@@ -1,6 +1,6 @@
 # ReadShore
 
-ReadShore is a read-later app. Connect your ReadShore library to find the articles, videos and posts you saved, read their saved text alongside ReadShore's summary and analysis, see what has waited longest unread, and save new links to read later.
+Save an article now and find it later in your own words. Connect your ReadShore library to see how many items you have saved, find articles by topic or tag, and open the original source. Ask about a saved passage, its summary or your notes. Create your library on the web or on iPhone.
 
 [Connection guide](https://readshore.app/connect-ai-assistants/?utm_source=claude-marketplace&utm_medium=mcp-package) · [Privacy](https://readshore.app/privacy/) · [Terms](https://readshore.app/terms/) · [Support](https://readshore.app/support/)
 
